@@ -1,0 +1,19 @@
+{
+  "name": "carrez",
+  "version": "1.0.0",
+  "description": "> node.js workshop based on real estate",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EsilvGuillaume/carrez.git"
+  },
+  "author": "Guillaume AMBROISE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EsilvGuillaume/carrez/issues"
+  },
+  "homepage": "https://github.com/EsilvGuillaume/carrez#readme"
+}
