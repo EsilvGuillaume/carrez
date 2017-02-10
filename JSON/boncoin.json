@@ -1,0 +1,11 @@
+{
+	"title": "LeBonCoin Json",
+	"type": "object",
+	"properties": {
+    "prix": "integer",
+		"ville_postal": "string",
+		"type": "string",
+		"piece": "integer",
+		"surface": "integer"
+	}
+}

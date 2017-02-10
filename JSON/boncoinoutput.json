@@ -1,0 +1,11 @@
+{
+    "title": "LeBonCoin Json",
+    "type": "object",
+    "properties": {
+        "prix": "300000",
+        "ville_postal": "goussainville-95190",
+        "type": "Maison",
+        "piece": "6",
+        "surface": "200"
+    }
+}

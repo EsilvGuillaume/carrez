@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Carrez</title>
+    <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0">
+    <link href="/Style/bootstrap.min.css" rel="stylesheet">
+    <link href="/Style/styles.css" rel="stylesheet">
+    <script src="/Js/jquery.min.js"></script>
+    <script src="/Js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+            <div class="navbar navbar-inverse" role="banner">
+              <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+	           <div class="col-md-5">
+	              <!-- Logo -->
+	              <div class="logo">
+	                 <h2><a href="/">Good Price Or not ?</a></h2>
+	              </div>
+	           </div>
+	           <div class="col-md-7">
+	                    <ul class="nav navbar-nav navbar-right">
+	                        <li><h2><a href="https://www.leboncoin.fr/ventes_immobilieres/offres">Le Bon Coin</a></h2></li>
+	                        </ul>
+	              </div>
+              </nav>
+	           </div>
+	        </div>
+	     </div>
+	</div>
+  <div class="container">
+    <div class="row">
+        <h1 class="display-3">Fonctionnement</h1>
+        <p class="lead">Pour savoir si une annonce immobilière trouvée sur le bon coin est intéressante en terme de prix, veuillez remplir le formulaire ci-dessous</p>
+        <hr class="my-4">
+        <p>L'application ne fonctionne qu'avec les adresses sans caractère spéciaux, comme les accents par exemple. Le temps d'execution est d'environ 7 secondes.
+Des liens fonctionnants avec le site, ainsi qu'une vidéo de demonstration sont données en bas de page.
+        Les résultats s'afficheront dans l'encadré prévu ci-dessous. Le code couleur est le suivant selon les résultats :</p>
+        | Note : Expensive se situe entre le prix moyen et le prix haut | Good sous le prix moyen | Bad au dessus du prix haut |
+  <button id="good" name="good"class="btn btn-success">Good</button>
+        <button id="exp" name="exp"  class="btn btn-warning">Expensive</button>
+        <button id="bad" name="bad" class="btn btn-danger">Bad</button>
+        <button id="error" name="error"  class="btn btn-info">Erreur</button>
+        <hr class="my-4">
+    <br/>
+      <form method="post" action="/" class="form-horizontal">
+      <fieldset>
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">URL BonCoin :</label>
+        <div class="col-md-5">
+        <input id="textinput" name="Url" placeholder="" class="form-control input-md" required="" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="Estimate">Estimate :</label>
+        <div class="col-md-4">
+          <button id="Estimate" name="Estimate" type="submit" class="btn btn-primary">Go !</button>
+        </div>
+      </div>
+
+      </fieldset>
+      </form>
+
+      <form   class="form-horizontal">
+      <fieldset>
+      <legend>Résultat</legend>
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">URL BonCoin saisie :</label>
+        <div class="col-md-5">
+        <input id="textinput" name="Url" value="<%= urlenter %>" class="btn btn-primary form-control input-md" required="" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="resultofinal">Résultat :</label>
+        <div class="col-md-4">
+          <% if( result == '' ){ %>
+            <input id="Found" name="Found" value="Wait Request" class="btn btn-primary form-control input-md"></input>
+            <% } %>
+          <% if( result == 'Expensive' ){ %>
+            <input id="Found" name="Found" value="<%=result%>" class="btn btn-warning form-control input-md"></input>
+ <% } %>
+          <% if( result == 'Good' ){ %>
+            <input id="Found" name="Found" value="<%=result%>"class="btn btn-success form-control input-md"></input>
+             <% } %>
+             <% if( result == 'Bad' ){ %>
+               <input id="Found" name="Found" value="<%=result%>" class="btn btn-danger form-control input-md"></input>
+               <% } %>
+               <% if( result == 'Error' ){ %>
+                 <input id="errorr" name="errorr" value="<%=result%> lien avec caractère spéciaux" class="btn btn-info form-control input-md"></input>
+                 <% } %>
+
+        </div>
+      </div>
+
+      </fieldset>
+      </form>
+      <hr class="my-4">
+        <h2>Annexe lien</h2>
+      <p>Lien expensive exemple : https://www.leboncoin.fr/ventes_immobilieres/1090424793.htm?ca=12_s</p>
+        <p> Lien bad exemple : Pas d'exemple trouvé </p>
+        <p> Lien good exemple : https://www.leboncoin.fr/ventes_immobilieres/1070512065.htm?ca=12_s </p>
+        <p> Lien error exemple : https://www.leboncoin.fr/ventes_immobilieres/971743908.htm?ca=12_s </p>
+        <video width="800" height="700" controls>
+ <source src="/Style/Carrez.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+    </div>
+  </div>
+</body>

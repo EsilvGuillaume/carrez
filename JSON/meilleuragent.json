@@ -1,0 +1,18 @@
+{
+	"title": "MeilleurAgent Json",
+	"type": "object",
+	"properties": {
+		"ville": "string",
+		"Appartement": {
+			"max": "string",
+			"min": "string",
+			"moy": "string"
+		},
+		"Maison": {
+			"max": "string",
+			"min": "string",
+			"moy": "string"
+		},
+		"deal": "string"
+	}
+}
